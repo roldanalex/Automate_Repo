@@ -1,0 +1,4 @@
+# Add cache folder
+__pycache__/*%
+Git_Token.py
+Git_Token.pyc
