@@ -1,5 +1,4 @@
 # Add cache folder
 Git_Token.py
 Git_Token.pyc
-.DS_Store
 /__pycache__/
