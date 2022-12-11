@@ -46,9 +46,29 @@ try:
     os.chdir(REPOSITORY_PATH) # move to repository path
     os.system("mkdir " + repo_name) # Create the folder with the repo name
     os.chdir(REPOSITORY_PATH + repo_name) # Move to repo folder
+    os.system("mkdir app") # Create an app folder
+    os.system("mkdir data") # Create a data folder
+    os.system("mkdir figs") # Create a fig folder
+    os.system("mkdir docs") # Create a documentation folder
+    os.system("mkdir src") # Create a source code folder
+    os.system("mkdir report") # Create a report folder
+    os.chdir(REPOSITORY_PATH + repo_name + "/app") # Move to app folder
+    os.system("mkdir www") # Create www folder folder
+    os.system("mkdir rds") # Create rds folder folder
+    os.system("mkdir utils") # Create an report folder
+    os.system("touch ui.R ") # Create UI file
+    os.system("touch server.R ") # Create server file
+    os.system("touch global.R ") # Create global file
+    os.chdir(REPOSITORY_PATH + repo_name) # Move to repo folder
     os.system("git init")
     os.system("git remote add origin https://github.com/" + GITHUB_USER + "/" + repo_name + ".git")
-    os.system("echo '# " + repo_name + "' >> README.md")
+    os.system("echo '# " + repo_name + "' >> README.md") # Create Readme file
+    os.system("echo '.DS_Store' >> .gitignore") # Create gitignore and add file
+    os.system("echo '.RData' >> .gitignore") # Add RData to gitignore file
+    os.system("echo '.Rhistory' >> .gitignore") # Add Rhistory to gitignore file
+    os.system("echo '.Renviron' >> .gitignore") # Add Renviron to gitignore file
+    os.system("echo '/app/rsconnect/' >> .gitignore") # Add app/rsconnect to gitignore file
+    os.system("echo '/app/.Renviron' >> .gitignore") # Add app/Renviron to gitignore file
     os.system("git add . && git commit -m 'Initial Commit' && git push origin master")
 except FileExistsError as err:
     raise SystemExit(err)
