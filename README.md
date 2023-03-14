@@ -1,9 +1,8 @@
 # Automate Github Repository
+**IMPORTANT:** Please make sure to first setup a *Github API Token and folder path* before running the application.
 
-## Disclaimer
+# Overview
+Create a Github repository or R Project automatically using your command line.
 
-This script requires a **Github Account, Github Token and a Repository Path**.
-
-## The Code
-
-This *Python* script helps the user to **automate Githuib repository creation** by using user's Github Token and API.
+## Preview
+<img src="figs/Github_Auto_R.png" alt="R Project Example">
